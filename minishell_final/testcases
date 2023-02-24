@@ -1,0 +1,30 @@
+
+wrongcmd
+echo $?
+ls
+echo $?
+< infile cat
+< infile cat | grep a
+< infile cat | grep a | wc
+< infile cat | grep a | wc -l
+cat < infile
+// 환경변수, export, unset
+env
+env | grep SHLVL
+./minishell
+env | grep SHLVL -> SHLVL 값 바껴야됨.
+export a=b b=c c=d
+export a=aa b=cc
+export A=B B=C
+unset a
+unset b c A B
+// cd
+cd ~
+cd
+cd -
+echo $OLDPWD -> OLDPWD가 변경되야됨.
+// ctrl + [d, c, \] 테스트
+// pwd 테스트
+pwd
+// heredoc + append
+<< eof cat >> infile -> infile 뒤에 추가됨
